@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💸 SplitMate — The Ultimate Roommate Expense Utility
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![UPI Integrated](https://img.shields.io/badge/UPI-Integrated-orange?style=flat-square)](https://www.npci.org.in/what-we-do/upi/product-overview)
 
-First, run the development server:
+SplitMate is a premium, high-performance web utility designed to simplify the often-awkward process of splitting bills and settling debts with roommates and friends. Built with a focus on **visual excellence** and **frictionless UX**, it eliminates the mental math and manual entry usually associated with group finances.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Why SplitMate?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most expense trackers are cluttered and slow. SplitMate is built for speed:
+- **Minimalist Design**: A clean, bento-style dashboard that shows exactly where you stand in seconds.
+- **Smart Debt Simplification**: Uses a minimal transaction algorithm to ensure the fewest payments possible. No more "circular" debts.
+- **Instant UPI Settlements**: Don't just track—**pay**. Generate UPI links/QR data directly to settle up via your favorite banking app.
+- **Privacy-Centric**: Focused on demo excellence with local-first persistence.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Key Features
 
-## Learn More
+- 📊 **Dynamic Dashboard**: Real-time visualization of "You Owe" vs. "You are Owed".
+- 🤝 **Roommate Management**: Easily add or remove members from your group.
+- 🧾 **Activity Feed**: A transparent history of all shared expenses and settlements.
+- ⚡ **Minimal Transactions**: Intelligent calculation of the most efficient way to settle everyone.
+- 🎨 **Dark Mode Excellence**: Fully responsive and theme-aware UI for any environment.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State Management**: React Hooks & Context API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏁 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/vickyiitp/Spilt-Pro-demo.git
+   cd Spilt-Pro-demo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the app**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the magic.
+
+---
+
+## 📸 Preview
+
+*Imagine a stunning, glassmorphic dashboard with vibrant balance indicators and smooth micro-animations.*
+
+---
+
+**SplitMate** is more than just a tool; it's a demonstration of modern web engineering and design-first development. Built with ❤️ for roommates everywhere.
