@@ -7,9 +7,12 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { motion } from "framer-motion";
 import { Plus, Users } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Dashboard() {
-  const { expenses, balances, users, isLoaded } = useSplitMate();
+  const { expenses, balances, users, addUser, isLoaded } = useSplitMate();
+  const [showAddUser, setShowAddUser] = useState(false);
+  const [newUserName, setNewUserName] = useState("");
 
   if (!isLoaded) return null;
 
@@ -21,6 +24,14 @@ export default function Dashboard() {
   const youOwe = userBalance < 0 ? Math.abs(userBalance) : 0;
   const youAreOwed = userBalance > 0 ? userBalance : 0;
 
+  const handleAddUser = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newUserName.trim()) return;
+    addUser(newUserName.trim());
+    setNewUserName("");
+    setShowAddUser(false);
+  };
+
   return (
     <div className="space-y-8 pb-8">
       <header className="flex justify-between items-end">
@@ -30,11 +41,50 @@ export default function Dashboard() {
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg shadow-blue-100 dark:shadow-none">
-            {users.length} Active
-          </div>
+          <button 
+            onClick={() => setShowAddUser(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg shadow-blue-100 dark:shadow-none transition-colors flex items-center gap-1"
+          >
+            <Users size={12} /> {users.length} Active
+          </button>
         </div>
       </header>
+
+      {showAddUser && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <motion.form 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            onSubmit={handleAddUser} 
+            className="bg-white dark:bg-gray-800 p-6 rounded-3xl w-full max-w-sm"
+          >
+            <h3 className="text-xl font-bold mb-4">Add Roommate</h3>
+            <input
+              type="text"
+              placeholder="Name"
+              required
+              className="w-full pl-4 pr-4 py-3 mb-4 bg-gray-50 dark:bg-gray-900 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+              value={newUserName}
+              onChange={(e) => setNewUserName(e.target.value)}
+            />
+            <div className="flex gap-2">
+              <button 
+                type="button" 
+                onClick={() => setShowAddUser(false)} 
+                className="flex-1 py-3 text-gray-500 bg-gray-100 dark:bg-gray-700 rounded-xl"
+              >
+                Cancel
+              </button>
+              <button 
+                type="submit" 
+                className="flex-1 py-3 bg-blue-600 text-white rounded-xl font-bold"
+              >
+                Add User
+              </button>
+            </div>
+          </motion.form>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 gap-4">
         <BalanceCard type="owed" amount={youAreOwed} />

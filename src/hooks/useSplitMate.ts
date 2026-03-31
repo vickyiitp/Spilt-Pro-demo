@@ -6,11 +6,8 @@ import { calculateBalances } from "@/utils/calculateBalances";
 
 export function useSplitMate() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
-  const [users, setUsers] = useState<string[]>(["You", "Rahul", "Priya"]);
-  const [upiMap, setUpiMap] = useState<Record<string, string>>({
-    "Rahul": "rahul@upi",
-    "Priya": "priya@upi",
-  });
+  const [users, setUsers] = useState<string[]>(["You"]);
+  const [upiMap, setUpiMap] = useState<Record<string, string>>({});
 
   const [isLoaded, setIsLoaded] = useState(false);
 
