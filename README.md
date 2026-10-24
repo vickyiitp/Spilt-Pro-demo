@@ -1,70 +1,34 @@
-# 💸 SplitMate — The Ultimate Roommate Expense Utility
+<div align="center">
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![UPI Integrated](https://img.shields.io/badge/UPI-Integrated-orange?style=flat-square)](https://www.npci.org.in/what-we-do/upi/product-overview)
+# 💳 SpiltPro — Peer-to-Peer Expense Splitting Engine
+### Graph-Based Debt Minimization & Collaborative Group Financial Ledger
 
-SplitMate is a premium, high-performance web utility designed to simplify the often-awkward process of splitting bills and settling debts with roommates and friends. Built with a focus on **visual excellence** and **frictionless UX**, it eliminates the mental math and manual entry usually associated with group finances.
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Fintech](https://img.shields.io/badge/Fintech-Debt%20Simplification-10b981?style=for-the-badge)](https://devillabs.dev)
+[![Architect](https://img.shields.io/badge/Architect-Vicky%20Kumar-8b5cf6?style=for-the-badge&logo=github)](https://github.com/vickyiitp)
 
----
-
-## ✨ Why SplitMate?
-
-Most expense trackers are cluttered and slow. SplitMate is built for speed:
-- **Minimalist Design**: A clean, bento-style dashboard that shows exactly where you stand in seconds.
-- **Smart Debt Simplification**: Uses a minimal transaction algorithm to ensure the fewest payments possible. No more "circular" debts.
-- **Instant UPI Settlements**: Don't just track—**pay**. Generate UPI links/QR data directly to settle up via your favorite banking app.
-- **Privacy-Centric**: Focused on demo excellence with local-first persistence.
-
-## 🚀 Key Features
-
-- 📊 **Dynamic Dashboard**: Real-time visualization of "You Owe" vs. "You are Owed".
-- 🤝 **Roommate Management**: Easily add or remove members from your group.
-- 🧾 **Activity Feed**: A transparent history of all shared expenses and settlements.
-- ⚡ **Minimal Transactions**: Intelligent calculation of the most efficient way to settle everyone.
-- 🎨 **Dark Mode Excellence**: Fully responsive and theme-aware UI for any environment.
-
-## 🛠 Tech Stack
-
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **State Management**: React Hooks & Context API
-
-## 🏁 Getting Started
-
-### Prerequisites
-- Node.js 18.x or later
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/vickyiitp/Spilt-Pro-demo.git
-   cd Spilt-Pro-demo
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open the app**
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the magic.
+</div>
 
 ---
 
-## 📸 Preview
+## 🧮 Debt Simplification Algorithm
 
-*Imagine a stunning, glassmorphic dashboard with vibrant balance indicators and smooth micro-animations.*
+SpiltPro utilizes a graph-based debt minimization algorithm that reduces circular debts:
+```
+Traditional:  Alice owes Bob $20 -> Bob owes Charlie $20 -> Charlie owes Alice $20 (3 Transactions)
+SpiltPro:     All debts resolved with 0 Transactions.
+```
 
----
+- 👥 **Multi-Currency Shared Pots**: Split rent, group trips, and restaurant tabs with custom percentage splits.
+- 🧾 **Receipt Itemization**: Assign specific items on a bill to individual members.
+- 📱 **One-Click UPI / WhatsApp Pay Settlement**: Direct settlement links generated on the fly.
 
-**SplitMate** is more than just a tool; it's a demonstration of modern web engineering and design-first development. Built with ❤️ for roommates everywhere.
+```bash
+git clone https://github.com/vickyiitp/Spilt-Pro-demo.git
+cd Spilt-Pro-demo
+npm install
+npm run dev
+```
+
+Engineered by **Vicky Kumar** @ [Devil Labs](https://devillabs.dev)
